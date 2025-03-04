@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
+
 |--------------------------------------------------------------------------
 | API Routes
 |--------------------------------------------------------------------------
@@ -17,7 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/doctors', 'JsonController@getData');
-Route::post('/doctors', 'JsonController@postData');
-Route::put('/doctors/{id}', 'JsonController@updateData');
-Route::delete('/doctors/{id}', 'JsonController@deleteData');
+// Route::get('/data', 'JsonController@getData');
+// Route::post('/data', 'JsonController@postData');
+// Route::put('/data/{id}', 'JsonController@updateData');
+// Route::delete('/data/{id}', 'JsonController@deleteData');
+
+Route::get('/doctors', 'DoctorsController@getData');
+Route::post('/doctors', 'DoctorsController@postData');
+Route::put('/doctors/{id}', 'DoctorsController@updateData');
+Route::delete('/doctors/{id}', 'DoctorsController@deleteData');

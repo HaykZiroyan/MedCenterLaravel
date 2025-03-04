@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class JsonData extends Model
-{ 
+class Doctors extends Model
+{
     protected $fillable = [
         'name',
-        'email',
-        'phone',
+        'profession',
+        'service',
     ];
 
     public function scopeStartsWithA($query)
