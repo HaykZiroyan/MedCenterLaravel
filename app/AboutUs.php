@@ -4,13 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Doctors extends Model
+class AboutUs extends Model
 {
     protected $fillable = [
-        'name',
-        'profession',
-        'service',
-        'position',
+        'title',
+        'image',
     ];
 
     public function scopeStartsWithA($query)
@@ -18,4 +16,3 @@ class Doctors extends Model
         return $query->where('name', 'like', 'A%');
     }
 }
-
